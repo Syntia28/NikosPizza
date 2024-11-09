@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NikosPizza.core\NikosPizza.core.csproj" />
+    <ProjectReference Include="..\NikosPizza.Application\NikosPizza.Application.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
