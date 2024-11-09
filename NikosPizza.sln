@@ -5,6 +5,12 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikosPizza.Api", "NikosPizza.Api\NikosPizza.Api.csproj", "{F4C0F6B6-FEB3-4E50-A2AC-F4D428572787}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikosPizza.Application", "NikosPizza.Application\NikosPizza.Application.csproj", "{022C3748-B9A6-4F07-9EE0-76A5032BFB38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikosPizza.core", "NikosPizza.core\NikosPizza.core.csproj", "{6E6DACA2-19B8-46AC-A788-213C5F2DF7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NikosPizza.Infraestructure", "NikosPizza.Infraestructure\NikosPizza.Infraestructure.csproj", "{BF8736C6-B842-4AF4-A158-86ED587D4A84}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{F4C0F6B6-FEB3-4E50-A2AC-F4D428572787}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4C0F6B6-FEB3-4E50-A2AC-F4D428572787}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4C0F6B6-FEB3-4E50-A2AC-F4D428572787}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022C3748-B9A6-4F07-9EE0-76A5032BFB38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022C3748-B9A6-4F07-9EE0-76A5032BFB38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022C3748-B9A6-4F07-9EE0-76A5032BFB38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022C3748-B9A6-4F07-9EE0-76A5032BFB38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E6DACA2-19B8-46AC-A788-213C5F2DF7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E6DACA2-19B8-46AC-A788-213C5F2DF7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E6DACA2-19B8-46AC-A788-213C5F2DF7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E6DACA2-19B8-46AC-A788-213C5F2DF7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8736C6-B842-4AF4-A158-86ED587D4A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8736C6-B842-4AF4-A158-86ED587D4A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8736C6-B842-4AF4-A158-86ED587D4A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8736C6-B842-4AF4-A158-86ED587D4A84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
