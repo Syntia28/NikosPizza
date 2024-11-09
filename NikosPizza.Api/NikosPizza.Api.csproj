@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NikosPizza.Application\NikosPizza.Application.csproj" />
+    <ProjectReference Include="..\NikosPizza.core\NikosPizza.core.csproj" />
+    <ProjectReference Include="..\NikosPizza.Infraestructure\NikosPizza.Infraestructure.csproj" />
+  </ItemGroup>
+
 </Project>
