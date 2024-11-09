@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NikosPizza.Application.Repositories;
+using NikosPizza.Infraestructure.Repositories;
 
 namespace NikosPizza.Infraestructure
 {
@@ -14,6 +16,7 @@ namespace NikosPizza.Infraestructure
                         x => x.MigrationsHistoryTable("_EFMigrationHistory", "pizza")
                         )
             );
+            services.AddScoped<IPizzaRepository, PizzaRepository>();
 
             return services;
         }
