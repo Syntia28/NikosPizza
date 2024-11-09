@@ -7,7 +7,7 @@ using NikosPizza.Application;
 
 namespace NikosPizza.Infraestructure.Repositories
 {
-    public class PizzaRepository : RepositoryBase
+    public class PizzaRepository
     {
 
     }

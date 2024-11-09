@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NikosPizza.core\NikosPizza.core.csproj" />
-    <ProjectReference Include="..\NikosPizza.Infraestructure\NikosPizza.Infraestructure.csproj" />
+  
   </ItemGroup>
 
   <ItemGroup>
