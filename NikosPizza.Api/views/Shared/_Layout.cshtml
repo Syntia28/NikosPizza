@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - NikosPizza</title>
+
+    <!-- Main CSS Files -->
+    <link rel="stylesheet" href="~/Templates/iLanding/assets/css/main.css" asp-append-version="true" />
+    <link href="~/Templates/iLanding/assets/img/favicon.png" rel="icon" asp-append-version="true">
+    <!-- Agregar otras referencias de CSS y JavaScript aquí -->
+
+    <!-- Vendor CSS Files -->
+    <link href="~/Templates/iLanding/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true">
+    <!-- Otros archivos de CSS... -->
+</head>
+<body>
+
+    <!-- Contenido común como el encabezado o el menú de navegación -->
+
+    <!-- Renderiza el contenido de la vista específica -->
+    <main role="main" class="container">
+           @RenderBody()
+    </main>
+    <!-- Scripts de la plantilla Bootstrap -->
+    <script src="~/Templates/iLanding/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <!-- Otros scripts... -->
+</body>
+</html>

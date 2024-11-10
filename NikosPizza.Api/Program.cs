@@ -1,6 +1,7 @@
 using Microsoft.OpenApi.Models;
 using NikosPizza.Infraestructure;
 using NikosPizza.Application;
+using NikosPizza.Api.Routes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,22 +23,20 @@ builder.Services.AddHttpClient();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+/* if (app.Environment.IsDevelopment())
 {
 
     app.UseSwagger();
     app.UseSwaggerUI();
    // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NikosPizza.API v1"));
-}
+} */
 
 //app.UseHttpsRedirection();
-app.UseStaticFiles(); // Esto permite servir archivos estáticos (CSS, JS, imágenes, etc.)
+app.UseStaticFiles(); // Esto permite servir archivos estï¿½ticos (CSS, JS, imï¿½genes, etc.)
 app.UseRouting();
 
 app.UseAuthorization();
+RouteConfig.RegisterRoutes(app);
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapControllers();
 app.Run();
