@@ -20,6 +20,7 @@ namespace NikosPizza.Application.Queries.PizzaQueries
                                                  Nombre = x.Nombre,
                                                  Precio = x.Precio.ToString(),
                                                  Descripcion = x.Descripcion,
+                                                 Url=x.ImagenUrl,
                                              }).ToList();
             return respons;
         }
