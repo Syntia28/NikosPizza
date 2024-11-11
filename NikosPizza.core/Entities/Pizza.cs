@@ -9,7 +9,6 @@ namespace NikosPizza.core.Entities
         public string Tamaño { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
-        
-
+        public string ImagenUrl { get; set; }
     }
 }

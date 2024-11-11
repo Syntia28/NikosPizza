@@ -1,0 +1,45 @@
+
+
+@model List<NikosPizza.Application.Queries.PizzaQueries.PizzaQueriesDTO>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Pizzas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Listado de Pizzas</h1>
+
+        @if (Model != null && Model.Count > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pizza in Model)
+                    {
+                        <tr>
+                            <td>@pizza.Nombre</td>
+                            <td>@pizza.Precio</td>
+                            <td>@pizza.Descripcion</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>No hay pizzas disponibles en este momento.</p>
+        }
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ using NikosPizza.Application.Queries.PizzaQueries;
 
 namespace NikosPizza.Api.Controllers
 {
-    [Route("api/v1/[controller]")]
+    [Route("Pizzas")]
     public class PizzaController : Controller
     {
         private readonly IMediator _mediator;
@@ -16,11 +16,12 @@ namespace NikosPizza.Api.Controllers
 
         [HttpGet("ListarPizzas")]
         [ProducesResponseType(typeof(List<PizzaQueriesDTO>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<List<PizzaQueriesDTO>>> Crear()
+        public async Task<ActionResult> ListarPizzas()
         {
-            PizzaQuery pizzaQuery = new PizzaQuery();
+            var pizzaQuery = new PizzaQuery();
             var result = await _mediator.Send(pizzaQuery);
-            return Ok(result);
+
+            return View(result);
         }
     }
 }
