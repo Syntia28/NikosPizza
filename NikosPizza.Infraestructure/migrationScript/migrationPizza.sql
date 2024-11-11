@@ -52,3 +52,28 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241111015619_initial1.1'
+)
+BEGIN
+    ALTER TABLE [pizza].[Pizzas] ADD [ImagenUrl] nvarchar(max) NOT NULL DEFAULT N'';
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241111015619_initial1.1'
+)
+BEGIN
+    INSERT INTO [pizza].[_EFMigrationHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20241111015619_initial1.1', N'8.0.10');
+END;
+GO
+
+COMMIT;
+GO
+
