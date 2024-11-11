@@ -9,12 +9,14 @@ namespace NikosPizza.Infraestructure
         public PizzaDbContext(DbContextOptions<PizzaDbContext> options) : base(options) { }
 
         public DbSet<Pizza> Pizzas { get; set; }
+        public DbSet<TamanioPizza> TamanioPizzas { get; set; }
 
 
 
         public void ModelConfiguration(ModelBuilder modelBuilder)
         {
             new PizzaConfiguration(modelBuilder.Entity<Pizza>());
+            new TamanioPizzaConfiguration(modelBuilder.Entity<TamanioPizza>());
         }
 
 
