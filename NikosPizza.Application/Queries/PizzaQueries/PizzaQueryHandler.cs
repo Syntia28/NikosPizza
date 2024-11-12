@@ -13,6 +13,11 @@ namespace NikosPizza.Application.Queries.PizzaQueries
         public async Task<List<PizzaQueriesDTO>> Handle(PizzaQuery request, CancellationToken cancellationToken)
         {
           var dataPizza = await _pizzaRepository.GetAllAsync();
+          var pizzaQuery = new PizzaQuery
+            {
+                TamanoPizzaId = Guid.NewGuid()  // Genera un Guid único para cada consulta
+            };
+
             List<PizzaQueriesDTO> respons = (from x in dataPizza
                                              select new PizzaQueriesDTO
                                              {
@@ -21,8 +26,9 @@ namespace NikosPizza.Application.Queries.PizzaQueries
                                                  Precio = x.Precio.ToString(),
                                                  Descripcion = x.Descripcion,
                                                  Url=x.ImagenUrl,
+                                                 TamanoPizzaId = x.TamanioPizzaId,
                                              }).ToList();
-            return respons;
+            return respons.Where(x => x.TamanoPizzaId == request.TamanoPizzaId).ToList();
         }
 
     }

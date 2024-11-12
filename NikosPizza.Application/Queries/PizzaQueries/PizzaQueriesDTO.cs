@@ -13,5 +13,6 @@ namespace NikosPizza.Application.Queries.PizzaQueries
         public string Precio { get; set; }
         public string Descripcion { get; set; }
         public string Url { get; set; }
+        public Guid? TamanoPizzaId { get; set; }
     }
 }

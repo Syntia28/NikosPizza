@@ -3,6 +3,7 @@
 
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using NikosPizza.core.Entities;
 
 namespace NikosPizza.Application
 {
@@ -16,5 +17,7 @@ namespace NikosPizza.Application
             });
             return services;
         }
+        
+
     }
 }

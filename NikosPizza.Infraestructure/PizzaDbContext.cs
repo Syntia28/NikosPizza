@@ -10,6 +10,7 @@ namespace NikosPizza.Infraestructure
 
         public DbSet<Pizza> Pizzas { get; set; }
         public DbSet<TamanioPizza> TamanioPizzas { get; set; }
+       
 
 
 

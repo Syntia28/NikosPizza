@@ -23,5 +23,23 @@ namespace NikosPizza.Api.Controllers
 
             return View(result);
         }
+        [HttpGet("FiltrarPizzasPorTamano")]
+        public async Task<IActionResult> FiltrarPizzasPorTamano()
+        {
+            // Genera un `Guid` dinámico para `TamanoPizzaId`
+            var tamanoPizzaId = Guid.NewGuid();
+
+            // Crea la consulta `PizzaQuery` con el `TamanoPizzaId` generado
+            var pizzaQuery = new PizzaQuery
+            {
+                TamanoPizzaId = tamanoPizzaId
+            };
+
+            // Envía la consulta a través de Mediator
+            var result = await _mediator.Send(pizzaQuery);
+
+            // Retorna los resultados
+            return Ok(result);
+        }
     }
 }

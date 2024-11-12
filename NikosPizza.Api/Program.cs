@@ -2,6 +2,7 @@ using Microsoft.OpenApi.Models;
 using NikosPizza.Infraestructure;
 using NikosPizza.Application;
 using NikosPizza.Api.Routes;
+using static NikosPizza.Application.ApplicationServiceRegistration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NikosPizza.API v1"));
 }
+
 
 //app.UseHttpsRedirection();
 app.UseStaticFiles(); // Esto permite servir archivos est�ticos (CSS, JS, im�genes, etc.)

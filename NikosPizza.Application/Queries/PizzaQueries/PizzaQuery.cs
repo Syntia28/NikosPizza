@@ -10,6 +10,7 @@ namespace NikosPizza.Application.Queries.PizzaQueries
 {
     public  class PizzaQuery: IRequest<List<PizzaQueriesDTO>>
     {
-        public PizzaQuery() { }
+        public Guid TamanoPizzaId { get; set; }  // Agregar esta propiedad
     }
 }
+
