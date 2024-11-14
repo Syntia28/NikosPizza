@@ -17,6 +17,7 @@ namespace NikosPizza.Infraestructure
                         )
             );
             services.AddScoped<IPizzaRepository, PizzaRepository>();
+            services.AddScoped<ITamanioPizzaRepository, TamanioPizzaRepository>();
 
             return services;
         }
