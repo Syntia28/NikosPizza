@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using NikosPizza.core.Entities.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace NikosPizza.Api.Routes
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapGroup("/identity").MapIdentityApi<IdentityUser>();
+            app.MapGroup("/identity").MapIdentityApi<ApplicationUser>();
         }
     }
 }

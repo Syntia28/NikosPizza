@@ -4,6 +4,7 @@ using NikosPizza.Application;
 using NikosPizza.Api.Routes;
 using static NikosPizza.Application.ApplicationServiceRegistration;
 using Microsoft.AspNetCore.Identity;
+using NikosPizza.core.Entities.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,11 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "NikosPizza.API", Version = "v1" });
 });
-builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+
+builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
     .AddEntityFrameworkStores<PizzaDbContext>();
+
+
 builder.Services.AddAuthorization();
 builder.Services.AddHttpClient();
 var app = builder.Build();

@@ -82,7 +82,7 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     DECLARE @var0 sysname;
@@ -97,7 +97,7 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     ALTER TABLE [pizza].[Pizzas] ADD [TamanioPizzaId] uniqueidentifier NULL;
@@ -106,7 +106,7 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     CREATE TABLE [pizza].[TamanioPizzas] (
@@ -122,7 +122,7 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     CREATE INDEX [IX_Pizzas_TamanioPizzaId] ON [pizza].[Pizzas] ([TamanioPizzaId]);
@@ -131,7 +131,7 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     ALTER TABLE [pizza].[Pizzas] ADD CONSTRAINT [FK_Pizzas_TamanioPizzas_TamanioPizzaId] FOREIGN KEY ([TamanioPizzaId]) REFERENCES [pizza].[TamanioPizzas] ([TamanioPizzaId]);
@@ -140,11 +140,211 @@ GO
 
 IF NOT EXISTS (
     SELECT * FROM [pizza].[_EFMigrationHistory]
-    WHERE [MigrationId] = N'20241111050838_initial1.2'
+    WHERE [MigrationId] = N'20241114031057_initial1.2'
 )
 BEGIN
     INSERT INTO [pizza].[_EFMigrationHistory] ([MigrationId], [ProductVersion])
-    VALUES (N'20241111050838_initial1.2', N'8.0.10');
+    VALUES (N'20241114031057_initial1.2', N'8.0.10');
+END;
+GO
+
+COMMIT;
+GO
+
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetRoles] (
+        [Id] nvarchar(450) NOT NULL,
+        [Descripcion] nvarchar(max) NULL,
+        [Name] nvarchar(256) NULL,
+        [NormalizedName] nvarchar(256) NULL,
+        [ConcurrencyStamp] nvarchar(max) NULL,
+        CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetUsers] (
+        [Id] nvarchar(450) NOT NULL,
+        [UserName] nvarchar(256) NULL,
+        [NormalizedUserName] nvarchar(256) NULL,
+        [Email] nvarchar(256) NULL,
+        [NormalizedEmail] nvarchar(256) NULL,
+        [EmailConfirmed] bit NOT NULL,
+        [PasswordHash] nvarchar(max) NULL,
+        [SecurityStamp] nvarchar(max) NULL,
+        [ConcurrencyStamp] nvarchar(max) NULL,
+        [PhoneNumber] nvarchar(max) NULL,
+        [PhoneNumberConfirmed] bit NOT NULL,
+        [TwoFactorEnabled] bit NOT NULL,
+        [LockoutEnd] datetimeoffset NULL,
+        [LockoutEnabled] bit NOT NULL,
+        [AccessFailedCount] int NOT NULL,
+        CONSTRAINT [PK_AspNetUsers] PRIMARY KEY ([Id])
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetRoleClaims] (
+        [Id] int NOT NULL IDENTITY,
+        [RoleId] nvarchar(450) NOT NULL,
+        [ClaimType] nvarchar(max) NULL,
+        [ClaimValue] nvarchar(max) NULL,
+        CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+        CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [pizza].[AspNetRoles] ([Id]) ON DELETE CASCADE
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetUserClaims] (
+        [Id] int NOT NULL IDENTITY,
+        [UserId] nvarchar(450) NOT NULL,
+        [ClaimType] nvarchar(max) NULL,
+        [ClaimValue] nvarchar(max) NULL,
+        CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+        CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [pizza].[AspNetUsers] ([Id]) ON DELETE CASCADE
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetUserLogins] (
+        [LoginProvider] nvarchar(450) NOT NULL,
+        [ProviderKey] nvarchar(450) NOT NULL,
+        [ProviderDisplayName] nvarchar(max) NULL,
+        [UserId] nvarchar(450) NOT NULL,
+        CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+        CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [pizza].[AspNetUsers] ([Id]) ON DELETE CASCADE
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetUserRoles] (
+        [UserId] nvarchar(450) NOT NULL,
+        [RoleId] nvarchar(450) NOT NULL,
+        CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+        CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [pizza].[AspNetRoles] ([Id]) ON DELETE CASCADE,
+        CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [pizza].[AspNetUsers] ([Id]) ON DELETE CASCADE
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE TABLE [pizza].[AspNetUserTokens] (
+        [UserId] nvarchar(450) NOT NULL,
+        [LoginProvider] nvarchar(450) NOT NULL,
+        [Name] nvarchar(450) NOT NULL,
+        [Value] nvarchar(max) NULL,
+        CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+        CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [pizza].[AspNetUsers] ([Id]) ON DELETE CASCADE
+    );
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [pizza].[AspNetRoleClaims] ([RoleId]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    EXEC(N'CREATE UNIQUE INDEX [RoleNameIndex] ON [pizza].[AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL');
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE INDEX [IX_AspNetUserClaims_UserId] ON [pizza].[AspNetUserClaims] ([UserId]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE INDEX [IX_AspNetUserLogins_UserId] ON [pizza].[AspNetUserLogins] ([UserId]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [pizza].[AspNetUserRoles] ([RoleId]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    CREATE INDEX [EmailIndex] ON [pizza].[AspNetUsers] ([NormalizedEmail]);
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    EXEC(N'CREATE UNIQUE INDEX [UserNameIndex] ON [pizza].[AspNetUsers] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL');
+END;
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM [pizza].[_EFMigrationHistory]
+    WHERE [MigrationId] = N'20241115045704_initial1.3'
+)
+BEGIN
+    INSERT INTO [pizza].[_EFMigrationHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20241115045704_initial1.3', N'8.0.10');
 END;
 GO
 
