@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NikosPizza.core.Entities;
+using NikosPizza.core.Entities.Identity;
 using NikosPizza.Infraestructure.Configuration;
 
 namespace NikosPizza.Infraestructure
 {
-    public class PizzaDbContext : DbContext
+    public class PizzaDbContext : IdentityDbContext<ApplicationUser,ApplicationRole, ApplicationUserRole>
     {
         public PizzaDbContext(DbContextOptions<PizzaDbContext> options) : base(options) { }
 

@@ -16,6 +16,7 @@ namespace NikosPizza.Api.Controllers
 
         [HttpGet("ListarPizzas")]
         [ProducesResponseType(typeof(List<PizzaQueriesDTO>), (int)HttpStatusCode.OK)]
+
         public async Task<ActionResult> ListarPizzas([FromQuery] string codigo)
         {
             var pizzaQuery = new PizzaQuery
