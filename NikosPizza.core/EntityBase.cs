@@ -8,7 +8,7 @@ namespace NikosPizza.core
 {
     public abstract class EntityBase
     {
-        public DateTime Creado { get; set; }
+        public DateTime? Creado { get; set; }
         public DateTime? Update { get; set; }
     }
 }
