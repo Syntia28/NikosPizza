@@ -1,0 +1,168 @@
+[33mcommit decd6306470db4d8c497c8bb8934dd015164bd19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sat Nov 16 20:27:54 2024 -0500
+
+    implementar el registro
+
+[33mcommit 11f864cc21b98e5cd643bd08fbe725b2200b0992[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 15 02:24:25 2024 -0500
+
+    login
+
+[33mcommit 7bc57463d1e93e38fdbbe1a9eb14cef01ae0d6ab[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 15 00:36:00 2024 -0500
+
+    Tablas de user,role, user Role
+
+[33mcommit 0dd2df6455656f5fed1502a860ba31b52d73ac80[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Thu Nov 14 23:39:04 2024 -0500
+
+    agregar el front
+
+[33mcommit 0a272d407f35f201a45a634877cbefa4fb45e4d7[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Wed Nov 13 22:51:52 2024 -0500
+
+    piza controller por tamanio
+
+[33mcommit 0d190ec975f1a971d6dedf0cd623312a2bfb69f6[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Wed Nov 13 22:13:01 2024 -0500
+
+    migration 1.2
+
+[33mcommit c6ff7d59ee65e5d3e0654c527d89316647ee94f0[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Wed Nov 13 21:47:17 2024 -0500
+
+    Agregar metodo addAsync
+
+[33mcommit caaf7940ab2af41f7292c9eabd75a0422c95ba34[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Mon Nov 11 21:02:16 2024 -0500
+
+    listar Pizzas
+
+[33mcommit c7d95393043b1964b39d94201a5c69cc7778a0ef[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Mon Nov 11 00:11:39 2024 -0500
+
+    create table TamanioPizza
+
+[33mcommit bf9efa2033d567aeb236d09f5c57c30cc133207a[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sun Nov 10 23:45:56 2024 -0500
+
+    Listas de pizzas
+
+[33mcommit bb5ffbdfb389a42971ce451bba58546788d15325[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sun Nov 10 22:37:48 2024 -0500
+
+    migracion
+
+[33mcommit 774798918a7490b5c8d4a7f3928b3c33cdcc69c9[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Sun Nov 10 20:57:45 2024 -0500
+
+    Migration add imagen url
+
+[33mcommit 8dd03cda704d9e455d33a7bce843c493735bf5e8[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sat Nov 9 23:09:13 2024 -0500
+
+    areglar el fronts
+
+[33mcommit 96a4937c6a869be93cb4bb1cc34c14ee5d4e3871[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Sat Nov 9 22:08:59 2024 -0500
+
+    implementar boostrp
+
+[33mcommit 878885b22930e8ba8a917e62fa7e3329dd8ed3bb[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sat Nov 9 20:56:17 2024 -0500
+
+    implementacion de vistas
+
+[33mcommit 2e6e97b9a8034ed40ac6624800c29758f70ac434[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Sat Nov 9 01:57:27 2024 -0500
+
+    Add Services, Injección de dependencias
+
+[33mcommit b3e7b33eb18a368bf3fc2f519fef4071148d05ae[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sat Nov 9 01:23:05 2024 -0500
+
+    respositorios
+
+[33mcommit f3407b085beab9b0e3461ed8b3a9dcc322900406[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Sat Nov 9 00:46:43 2024 -0500
+
+    update cproj
+
+[33mcommit 7de4021b280dce5a741b127838ac88e3ec1e47c3[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Sat Nov 9 00:20:32 2024 -0500
+
+    Agregar controlador para la idendidad pizza
+
+[33mcommit 5e8208818fb7e8541ab624858a0b1f088623de5b[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 8 23:00:12 2024 -0500
+
+    migration 1.0
+
+[33mcommit 6e6538570abe1d14be510cabb2230561268ac894[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Fri Nov 8 22:56:18 2024 -0500
+
+    configuracion de infrectuctura
+
+[33mcommit 0a18893a89594e9b0441fd59a1631256a8a63c73[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 8 22:16:47 2024 -0500
+
+    entidad Pizza
+
+[33mcommit d2c0084e47622caf261773e84dcb562cefbc2719[m
+Merge: 00b02ba 238776a
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Fri Nov 8 22:03:53 2024 -0500
+
+    Merge branch 'main' of https://github.com/Rosmel-Merlo/NikosPizza
+
+[33mcommit 00b02bade9a549a76c4be1749aced44d095cf080[m
+Author: Syntia28 <n00312421@upn.pe>
+Date:   Fri Nov 8 22:02:44 2024 -0500
+
+    cadena de conexion anidida
+
+[33mcommit 238776ac1c7f85011f3161aa6a331581aeff0401[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 8 21:55:00 2024 -0500
+
+    refenciar proyectos
+
+[33mcommit 728d5f4df93b450847009ef5e1db5cd98a4ab31a[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 8 21:46:57 2024 -0500
+
+    add proyectos al sln
+
+[33mcommit 5b2b43ed53df73090cea7da42347310c2317a4f9[m
+Author: Rosmel Merlo <rosmel2508@outlook.com.pe>
+Date:   Fri Nov 8 21:35:03 2024 -0500
+
+    inicio de proyecto
+
+[33mcommit 3420d7bbefeefe09a12057ce82a072688763efea[m
+Author: Personal <161627442+Rosmel-Merlo@users.noreply.github.com>
+Date:   Fri Nov 8 21:08:28 2024 -0500
+
+    Initial commit
